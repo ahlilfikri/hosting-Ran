@@ -7,11 +7,11 @@ const path = require('path');
 require('dotenv').config();
 
 app.use(cors(
-    {
-        origin : ['https://hosting-ran-bvz7.vercel.app/'],
-        methods : ['GET', 'POST', 'PUT', 'DELETE'],
-        credentials : true
-    }
+    // {
+    //     origin : ['https://hosting-ran-bvz7.vercel.app/'],
+    //     methods : ['GET', 'POST', 'PUT', 'DELETE'],
+    //     credentials : true
+    // }
 ))
 app.use('/assets',express.static('assets')); 
 
