@@ -8,7 +8,7 @@ require('dotenv').config();
 
 app.use(cors(
     {
-        origin : ['https://hosting-ran-api.vercel.app'],
+        origin : ['https://hosting-ran-mern-api.vercel.app'],
         methods : ['GET', 'POST', 'PUT', 'DELETE'],
         credentials : true
     }
