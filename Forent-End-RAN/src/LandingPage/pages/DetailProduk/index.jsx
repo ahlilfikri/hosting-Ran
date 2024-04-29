@@ -54,7 +54,7 @@ const Index = () => {
                     <div className="col-12 col-md-10">
                         <div className="row p-3 mt-3">
                             <div className="col-12 col-md-6 pe-5">
-                                <img src={wordData.image} style={{height:'450', width:'100%'}} /> 
+                                <img src={wordData.image} style={{height:'450', width:'100%'}} onError={(e) => { e.target.src = ImageError; }}/> 
                                 <div className="thumbnail d-flex justify-content-center">
                                     {data.map((item, i)=>(
                                         <img className='mx-1' key={i} alt="" src={item.image} onClick={()=>handleClick(i)} style={{ height: '5vw', width: '5vw',border:'1px solid grey', borderRadius: '0.5vw'}} onError={(e) => { e.target.src = ImageError; }}/>

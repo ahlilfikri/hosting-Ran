@@ -39,7 +39,7 @@ const Index = () => {
                             return (
                                 <div key={index} className="col-lg-12 col-sm-6 col-xl-4">
                                     <div className="image-container" style={{ overflow: 'hidden', height: '68%' }}>
-                                        <img src={imageSrc} alt="" style={{ height: '100%', width: '100%', objectFit: 'cover' }} />
+                                        <img src={imageSrc} alt="" style={{ height: '100%', width: '100%', objectFit: 'cover' }} onError={(e) => { e.target.src = ImageError; }} />
                                     </div>
                                     <div className="text-container">
                                         <p className='pt-2 fw-bold text-black' style={{ fontSize: '25px' }}>{item.title}</p>
