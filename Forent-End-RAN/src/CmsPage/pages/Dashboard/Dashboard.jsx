@@ -4,7 +4,7 @@ import CardProduct from '../../components/CardProduct/CardProduct';
 import CardKategori from '../../components/CardKategori/CardKategori';
 import CardBanner from '../../components/CardBanner/CardBanner';
 import CardVisitor from '../../components/CardVisitor/CardVisitor';
-import Sidebar from '../../components/Sidebar/Sidebar';
+import Sidebar from '../../components/SideBar/Sidebar';
 
 const DashboardCms = () => {
     if (!sessionStorage.getItem('token')) {
