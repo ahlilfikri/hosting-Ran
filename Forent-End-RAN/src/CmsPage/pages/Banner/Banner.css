@@ -1,0 +1,6 @@
+.btn-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #0F5998 40%, #2279c5 100%);
+}
