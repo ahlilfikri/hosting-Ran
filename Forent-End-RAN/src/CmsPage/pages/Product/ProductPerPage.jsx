@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 const port = `${import.meta.env.VITE_BASE_URL}/`;
 import { useParams } from 'react-router-dom';
-import Sibar from '../../components/Sidebar/Sidebar';
+import Sibar from '../../components/SideBar/Sidebar';
 import axios from 'axios';
 
 
