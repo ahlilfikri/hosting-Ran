@@ -37,16 +37,18 @@ const Index = () => {
 
                         <div className="content" style={{ position: 'relative', top: '50%', transform: 'translate(0,-50%)' }}>
                             <p style={{ fontSize: '35px' }}>Kegiatan Kami</p>
-                            <button className='btn-primary' style={{ color: 'white !important', background: '#0F5998' }}
-                                onClick={() => { window.location.href = '/kegiatan'; }}>
-                                <span style={{
-                                    color: 'white',
-                                    fontFamily: 'poppins',
-                                    fontSize: '12px',
-                                    fontWeight: 'bold',
+                            <Link to={`/kegiatan`}>
+                                <button className='btn-primary' style={{ color: 'white !important', background: '#0F5998' }}
+                                >
+                                    <span style={{
+                                        color: 'white',
+                                        fontFamily: 'poppins',
+                                        fontSize: '12px',
+                                        fontWeight: 'bold',
 
-                                }}>Lihat Semua</span>
-                            </button>
+                                    }}>Lihat Semua</span>
+                                </button>
+                            </Link>
                         </div>
 
                     </div>

@@ -55,15 +55,17 @@ const Index = () => {
                     <div className="col-12 col-sm-3 text-center">
                         <div className="content" style={{ position: 'relative', top: '50%', transform: 'translate(0,-50%)' }}>
                             <p style={{ fontSize: '35px' }}>Produk terbaru</p>
-                            <button className='btn-primary'style={{color: 'white !important',background: '#0F5998'}}
-                            onClick={() => {window.location.href = '/produk';}}>
-                                <span style={{
-                                    color: 'white',
-                                    fontFamily: 'poppins',
-                                    fontSize: '12px',
-                                    fontWeight: 'bold',
-                                
-                                }}>Lihat Semua</span>
+                            <button className='btn-primary' style={{ color: 'white !important', background: '#0F5998' }}
+                            >
+                                <Link to={`/kegiatan`}>
+                                    <span style={{
+                                        color: 'white',
+                                        fontFamily: 'poppins',
+                                        fontSize: '12px',
+                                        fontWeight: 'bold',
+
+                                    }}>Lihat Semua</span>
+                                </Link>
                             </button>
                         </div>
                     </div>
