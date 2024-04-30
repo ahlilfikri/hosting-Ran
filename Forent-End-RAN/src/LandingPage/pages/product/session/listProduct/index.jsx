@@ -1,8 +1,9 @@
 import ImageError from '../../../../../assets/error.png';
-import React, { Fragment, useState, useEffect } from 'react'; 
+import React, { Fragment, useState, useEffect } from 'react';
 import Navbar from '../../../../components/Navbar/Navbar';
 import axios from 'axios';
 import Footer from '../../../../components/Footer/Footer';
+import { Link } from 'react-router-dom';
 
 const port = `${import.meta.env.VITE_BASE_URL}/`;
 
@@ -66,7 +67,7 @@ const Index = () => {
         const category = event.target.textContent;
         if (kategoriSort == category) {
             setKategoriSort('none');
-        }else{
+        } else {
             setKategoriSort(category);
         }
     }
@@ -120,31 +121,34 @@ const Index = () => {
                                 borderRadius: '0.3vw'
                             };
                             return (
-                                <p 
-                                    key={index} 
-                                    onClick={handleKategori} 
-                                    value={item.nama} 
-                                    className="text-center p-1" 
+                                <p
+                                    key={index}
+                                    onClick={handleKategori}
+                                    value={item.nama}
+                                    className="text-center p-1"
                                     style={categoryStyle}>
                                     {item.nama}
                                 </p>
-                            );                        })}
+                            );
+                        })}
                         <h3 className='mt-5'>Brands</h3>
                     </div>
                     <div className="col-12 col-sm-8 mt-3">
                         <div className="row">
                             {loadState === 'load' && <p>Loading...</p>}
                             {loadState === 'success' && data && data.map((item, index) => {
-                                 const imageSrc = `${import.meta.env.VITE_BASE_URL}/assets/${encodeURIComponent(item.image)}`;
-                                 return(
-                                     <div key={index} className="col-6 col-md-3">
-                                    <div className="image-container" style={{ overflow: 'hidden', height: '68%' }}>
-                                        <img src={imageSrc} alt="" style={{ height: '100%', width: '100%', objectFit: 'cover', border: '1px solid #d8d5d5'}} onError={(e) => { e.target.src = ImageError; }} />
+                                const imageSrc = `${import.meta.env.VITE_BASE_URL}/assets/${encodeURIComponent(item.image)}`;
+                                return (
+                                    <div key={index} className="col-6 col-md-3">
+                                        <Link to={`/detail-produk/${item._id}`}>
+                                            <div className="image-container" style={{ overflow: 'hidden', height: '68%' }}>
+                                                <img src={imageSrc} alt="" style={{ height: '100%', width: '100%', objectFit: 'cover', border: '1px solid #d8d5d5' }} onError={(e) => { e.target.src = ImageError; }} />
+                                            </div>
+                                            <div id="content-produkTerbaru" className="content" style={{}}>
+                                                <p style={{ fontFamily: 'poppins', fontWeight: 'bold', fontSize: '20px' }}>{item.title}</p>
+                                            </div>
+                                        </Link>
                                     </div>
-                                         <div id="content-produkTerbaru" className="content" style={{}}>
-                                             <p style={{ fontFamily: 'poppins', fontWeight: 'bold', fontSize: '20px' }}>{item.title}</p>
-                                         </div>
-                                     </div>
                                 )
                             })}
                             {loadState === 'success' && data.length == 0 && <p>Data Tidak Ditemukan</p>}
@@ -153,13 +157,13 @@ const Index = () => {
                     </div>
                     <div className="col-sm-1">
 
-                        
+
                     </div>
-                    
+
                 </div>
             </div>
             <section id='kontak-section-product'>
-                <Footer/>
+                <Footer />
             </section>
         </Fragment>
     );
