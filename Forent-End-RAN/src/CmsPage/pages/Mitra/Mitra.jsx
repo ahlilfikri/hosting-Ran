@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 const port = `${import.meta.env.VITE_BASE_URL}/`;
 
 
-import Sidebar from '../../components/SideBar/Sidebar';
+// import Sidebar from '../../components/SideBar/Sidebar';
 import ModalMitra from '../../components/ModalMitra/ModalMitra';
 import ModalDelete from '../../components/ModalDelete/ModalDelete';
 import ModalMitraEdit from '../../components/ModalMitra/ModalMitraEdit';
@@ -103,7 +103,7 @@ const Mitra = () => {
             <div className="container-fluid pb-5" style={{ width: '100%', height: '100vh', overflowY: 'auto' }}>
                 <div className="row">
                     <div className="col-2 me-5">
-                        <Sidebar />
+                        {/* <Sidebar /> */}
                     </div>
                     <div className="col-8 ms-5 mt-5">
                         <div className="row">

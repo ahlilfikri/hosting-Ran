@@ -2,7 +2,7 @@ const port = `${import.meta.env.VITE_BASE_URL}/`;
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-import Sidebar from '../../components/SideBar/Sidebar';
+// import Sidebar from '../../components/SideBar/Sidebar';
 import ModalKategori from '../../components/ModalKategori/ModalKategori';
 import ModalKategoriEdit from '../../components/ModalKategori/ModalKategoriEdit';
 import ModalDelete from '../../components/ModalDelete/ModalDelete';
@@ -102,7 +102,7 @@ const Kategori = () => {
             <div className="container-fluid pb-5" style={{ width: '100%', height: '100vh', overflowY: 'auto' }}>
                 <div className="row">
                     <div className="col-2 me-5">
-                        <Sidebar />
+                        {/* <Sidebar /> */}
                     </div>
                     <div className="col-8 ms-5 mt-5">
                         <div className="row">

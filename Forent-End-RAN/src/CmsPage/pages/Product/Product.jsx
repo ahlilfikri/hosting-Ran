@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import Sidebar from '../../components/SideBar/Sidebar';
+// import Sidebar from '../../components/SideBar/Sidebar';
 import ModalProduct from '../../components/ModalProduct/ModalProduct';
 import ModalProductEdit from '../../components/ModalProduct/ModalProductEdit';
 import ModalDelete from '../../components/ModalDelete/ModalDelete';
@@ -105,7 +105,7 @@ const Product = () => {
             <div className="container-fluid pb-5" style={{ width: '100%', height: '100vh', overflowY: 'auto' }}>
                 <div className="row">
                     <div className="col-2 me-5">
-                        <Sidebar />
+                        {/* <Sidebar /> */}
                     </div>
                     <div className="col-8 ms-5 mt-5">
                         <div className="row">

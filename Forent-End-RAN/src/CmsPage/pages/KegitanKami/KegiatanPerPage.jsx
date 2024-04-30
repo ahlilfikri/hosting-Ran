@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 const port = `${import.meta.env.VITE_BASE_URL}/`;
 import { useParams } from 'react-router-dom';
-import Sibar from '../../components/Sidebar/Sidebar';
+// import Sibar from '../../components/Sidebar/Sidebar';
 import axios from 'axios';
 
 
@@ -53,7 +53,7 @@ const KegiatanPerPage = () => {
         <div className="container-fluid" style={{ width: '100%', height: '100vh' }}>
             <div className="row">
                 <div className="col-2">
-                    <Sibar />
+                    {/* <Sibar /> */}
                 </div>
                 <div className="col" style={{ padding: '20px', paddingTop: '1%', overflowY: 'hidden', height: '100vh' }}>
                     
