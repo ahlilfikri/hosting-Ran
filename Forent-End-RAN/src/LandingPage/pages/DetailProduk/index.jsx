@@ -26,7 +26,6 @@ const Index = () => {
     };
 
     const [content, setContent] = useState(true);
-    const [val, setVal] = useState(0);
     const [image, setImage] = useState();
 
     const handleContent = () => {
@@ -34,7 +33,6 @@ const Index = () => {
     };
 
     const handleClick = (index) => {
-        console.log(index)
         setVal(index)
         const imageSrc = `${import.meta.env.VITE_BASE_URL}/assets/${encodeURIComponent(data.image[index])}`;
         setImage(imageSrc)
@@ -50,7 +48,6 @@ const Index = () => {
         }
     }, [data]);
 
-    console.log(data);
     return (
         <Fragment>
             <Navbar sectionId={'kontak-section-detail-produk'}></Navbar>

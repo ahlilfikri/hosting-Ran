@@ -40,7 +40,7 @@ const Routing = createBrowserRouter([
         element: <Kegiatan />,
       },
       {
-        path: "/detail-kegiatan",
+        path: "/detail-kegiatan/:id",
         element: <DetailKegiatan />,
       },
       {

@@ -33,22 +33,22 @@ const Index = () => {
                 <div className="row">
                     <div className="col-12 col-sm-3 text-center">
 
-                        
+
 
                         <div className="content" style={{ position: 'relative', top: '50%', transform: 'translate(0,-50%)' }}>
                             <p style={{ fontSize: '35px' }}>Kegiatan Kami</p>
-                            <button className='btn-primary'style={{color: 'white !important',background: '#0F5998'}}
-                            onClick={() => {window.location.href = '/kegiatan';}}>
+                            <button className='btn-primary' style={{ color: 'white !important', background: '#0F5998' }}
+                                onClick={() => { window.location.href = '/kegiatan'; }}>
                                 <span style={{
                                     color: 'white',
                                     fontFamily: 'poppins',
                                     fontSize: '12px',
                                     fontWeight: 'bold',
-                                
+
                                 }}>Lihat Semua</span>
                             </button>
                         </div>
-                        
+
                     </div>
                     <div className="col-12 col-sm-8">
                         <Slider {...Setting}>
@@ -56,15 +56,17 @@ const Index = () => {
                                 const imageSrc = `${import.meta.env.VITE_BASE_URL}/assets/${encodeURIComponent(item.image)}`;
                                 return (
                                     <div key={index} className=''>
-                                        <div className="slide-content p-2" style={{ borderRight: '1px solid #d8d5d5' }}>
-                                            <div className="image d-block" >
-                                                <img className="pb-3" style={{height:'277px', width:'100%'}} src={imageSrc} alt="" onError={(e) => { e.target.src = ImageError; }} />
+                                        <Link to={`/detail-kegiatan/${item._id}`}>
+                                            <div className="slide-content p-2" style={{ borderRight: '1px solid #d8d5d5' }}>
+                                                <div className="image d-block" >
+                                                    <img className="pb-3" style={{ height: '277px', width: '100%' }} src={imageSrc} alt="" onError={(e) => { e.target.src = ImageError; }} />
+                                                </div>
+                                                <div className="content">
+                                                    <p style={{ fontFamily: 'poppins', fontWeight: 'bold', fontSize: '20px' }}>{item.title}</p>
+                                                    <p style={{ fontFamily: 'poppins', fontSize: '12px' }}>{item.content}</p>
+                                                </div>
                                             </div>
-                                            <div className="content">
-                                                <p style={{ fontFamily: 'poppins', fontWeight: 'bold', fontSize: '20px' }}>{item.title}</p>
-                                                <p style={{ fontFamily: 'poppins', fontSize: '12px' }}>{item.content}</p>
-                                            </div>
-                                        </div>
+                                        </Link>
                                     </div>
                                 )
                             })}
