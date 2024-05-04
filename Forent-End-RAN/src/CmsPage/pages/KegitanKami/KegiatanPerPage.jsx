@@ -36,7 +36,6 @@ const KegiatanPerPage = () => {
                 const response = await axios.get(`${port}media/${id}`);
                 const dataApi = response.data.payload.data;
                 setKegiatan(dataApi);
-                console.log(dataApi);
             } catch (error) {
                 console.log(error.message);
             }

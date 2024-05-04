@@ -32,7 +32,6 @@ const ModalMitra = ({ onClose }) => {
 
         try {
             const response = await axios.post(`${port}mitra`, formData);
-            console.log(response);
             onClose();
         } catch (error) {
             console.log(error.message);

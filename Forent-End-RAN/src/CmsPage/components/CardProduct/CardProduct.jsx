@@ -33,8 +33,6 @@ const CardProduct = () => {
         try{
             const response = await axios.get(`${port}ofp//latest`);
             const dataApi = response.data.payload.data;
-            console.log(dataApi.lastUpdate.updatedAt);
-            console.log(dataApi.lastAdd.createdAt);
             setLastUpdate(dataApi.lastUpdate.updatedAt);
             setLastAdd(dataApi.lastAdd.createdAt);  
 

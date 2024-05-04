@@ -89,7 +89,6 @@ const Product = () => {
             const response = await axios.delete(`${port}ofp/${selectedItemId}`);
             getDataProduct();
             setShowDeletePopUp(false);
-            console.log(response);
         } catch (error) {
             console.log(error.message);
         }

@@ -88,7 +88,6 @@ const Mitra = () => {
             const response = await axios.delete(`${port}mitra/${selectedItemId}`);
             getDataMitra();
             setShowDeletePopUp(false);
-            console.log(response);
         } catch (error) {
             console.log(error.message);
         }

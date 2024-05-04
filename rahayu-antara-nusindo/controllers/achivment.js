@@ -31,7 +31,6 @@ module.exports = {
         console.log(error.message);
         response(500, error, 'internal server error \n gagal menambahkan gambar achivment 2', res);
       } else {
-        console.log(req.file)
         try {
           const { title, content } = req.body;
           const image = req.file.filename;

@@ -87,7 +87,6 @@ const Kategori = () => {
             const response = await axios.delete(`${port}kategori/${selectedItemId}`);
             getDataKategori();
             setShowDeletePopUp(false);
-            console.log(response);
         } catch (error) {
             console.log(error.message);
         }

@@ -20,7 +20,6 @@ const ModalKategori = ({ onClose }) => {
     const handleSave = async () => {
         try{
             const response = await axios.post(`${port}kategori`, data);
-            console.log(response);
             onClose();
         }catch(error){
             console.log(error.message);

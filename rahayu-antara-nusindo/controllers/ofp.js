@@ -171,49 +171,6 @@ module.exports = {
             response(500, error, 'Internal Server Error \n Gagal menampilkan kategori', res);
         }
     },
-    //sort leatest 
-    // getLeatest: async (req, res) => {
-    //     try {
-    //         const content = await ofpModel.find().sort({ createdAt: -1 });
-    //         response(200, content, 'menampilkan semua ofp', res)
-    //     } catch (err) {
-    //         response(500, err, 'Internal server error \n Gagal menampilkan ofp', res)
-    //     }
-    // },
-    // //sort paling awal di buat
-    // getOldest: async (req, res) => {
-    //     try {
-    //         const content = await ofpModel.find().sort({ createdAt: 1 });
-    //         response(200, content, 'menampilkan semua ofp', res)
-    //     } catch (err) {
-    //         response(500, err, 'Internal server error \n Gagal menampilkan ofp', res)
-    //     }
-    // },
-
-    // search: async (req, res) => {
-    //     try {
-    //         const { title } = req.params;
-    //         const content = await ofpModel.find({ title: { $regex: title, $options: 'i' } })
-    //         const kategori = await kategoriSchema.find({ nama: { $regex: title, $options: 'i' } })
-
-    //         if (content.length === 0 && kategori.length === 0) {
-    //             return res.status(404).json({ message: 'Data tidak ditemukan' });
-    //         }
-
-    //         const result = {
-    //             "product": content,
-    //             "kategori": kategori
-    //         }
-
-
-    //         return res.status(200).json({ data: result, message: 'Menampilkan hasil pencarian' });
-
-
-    //     } catch (err) {
-    //         console.log(err);
-    //         response(500, err, 'Internal server error \n Gagal menampilkan ofp', res)
-    //     }
-    // },
     searchAndSort: async (req, res) => {
         try {
             const { search, sort, kategori } = req.params;

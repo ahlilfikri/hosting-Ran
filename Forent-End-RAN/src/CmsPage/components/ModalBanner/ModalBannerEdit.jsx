@@ -37,7 +37,6 @@ const ModalBannerEdit = ({ onClose, banner }) => {
                     'Content-Type': 'multipart/form-data'
                 }
             });
-            console.log(response);
             onClose();
         } catch (error) {
             console.log(error.message);

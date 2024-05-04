@@ -81,7 +81,6 @@ const Index = () => {
         GetFromProductApi();
     }, [sortBy, searchQuery, kategoriSort]);
 
-    console.log(data);
     return (
         <Fragment>
             <Navbar sectionId={'kontak-section-product'}></Navbar>

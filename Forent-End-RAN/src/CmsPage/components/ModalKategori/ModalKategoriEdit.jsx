@@ -27,7 +27,6 @@ const ModalKategoriEdit = ({ onClose, item }) => {
                 }
             });
 
-            console.log(response);
             onClose();
         } catch (error) {
             console.log(error.message);

@@ -46,7 +46,6 @@ const Index = () => {
             setImage(`${import.meta.env.VITE_BASE_URL}/assets/${encodeURIComponent(data.image[0])}`);
         }
     }, [data]);
-    console.log(data);
     return (
         <Fragment>
             <Navbar sectionId={'kontak-section-detail-produk'}></Navbar>

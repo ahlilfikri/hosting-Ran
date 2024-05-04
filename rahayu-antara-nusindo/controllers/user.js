@@ -71,7 +71,6 @@ module.exports = {
         try {
             const token = req.params.token;
             const user = await userModel.findOne({ token });      
-            console.log(user)
             if (!user) {
                 return res.status(400).json({ message: 'User tidak ditemukan' });
             }

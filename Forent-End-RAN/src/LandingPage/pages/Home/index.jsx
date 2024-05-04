@@ -18,7 +18,6 @@ class Index extends Component {
     contVisitor = async () => {
         try {
             const response = await axios.post(`${port}visit/visitor-count`);
-            console.log(response);
         } catch (error) {
             console.log(error.message);
         }

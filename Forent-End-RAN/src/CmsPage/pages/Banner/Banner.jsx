@@ -73,7 +73,6 @@ const Banner = () => {
             getDataBanner();
             setShowDeletePopUp(false);
             setSelectedItemId(null);
-            console.log(response);
         } catch (error) {
             console.log(error.message);
         }

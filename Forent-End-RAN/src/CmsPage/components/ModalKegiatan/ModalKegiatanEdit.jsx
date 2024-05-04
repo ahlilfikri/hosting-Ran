@@ -44,7 +44,6 @@ const ModalKegiatanEdit = ({ onClose, kegiatan }) => {
                     'Content-Type': 'multipart/form-data'
                 }
             });
-            console.log(response);
             onClose();
         } catch (error) {
             console.log(error.message);

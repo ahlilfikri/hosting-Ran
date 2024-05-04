@@ -77,10 +77,8 @@ const KegitanKami = () => {
     const daleteDataKegiatan = async () => {
         try {
             const response = await axios.delete(`${port}media/${selectedItemId}`);
-            console.log(response);
             GetDataKegiatan();
             setShowDeletePopUp(false);
-            console.log(response);
         } catch (error) {
             console.log(error.message);
         }
@@ -90,7 +88,6 @@ const KegitanKami = () => {
         try {
             const response = await axios.get(`${port}media`);
             const dataApi = response.data.payload.data;
-            // console.log(dataApi);
             setData(dataApi);
         } catch (error) {
             console.log(error.message);

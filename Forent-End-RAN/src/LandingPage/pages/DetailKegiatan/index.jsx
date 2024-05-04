@@ -38,8 +38,6 @@ const Index = () => {
         }
     }, [data]);
 
-    console.log(data);
-
     return (
         <Fragment>
             <Navbar sectionId={'kontak-section-detail-kegiatan'}></Navbar>

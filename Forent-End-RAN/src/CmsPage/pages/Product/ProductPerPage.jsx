@@ -31,7 +31,6 @@ const ProductPerPage = () => {
 		try {
 			const response = await axios.get(`${port}ofp/${id}`);
 			const dataApi = response.data.payload.data;
-			console.log(dataApi);
 			setProduct(dataApi);
 		} catch (error) {
 			console.log(error.message);

@@ -35,7 +35,6 @@ const Modalbanner = ({ onClose }) => {
 
         try {
             const response = await axios.post(`${port}banner`, formData);
-            console.log(response);
             onClose();
         } catch (error) {
             console.log(error.message);
