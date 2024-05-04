@@ -56,42 +56,6 @@ module.exports = {
 		});
     }, 
 
-
-    // put: async (req, res) => {
-	// 	const id = req.params._id;
-	// 	upload.many(req, res, async (error) => {
-	// 	if (error) {
-	// 		console.error(error.message);
-	// 		res.status(500).send({ message: 'Internal server error', error });
-	// 		return;
-	// 	}	
-	// 		const { title, content,status } = req.body;
-	// 		const {confrimUpdateImage} = req.body;
-	// 		const updateMedia = { 
-	// 			title,
-	// 			content,
-	// 			status 
-	// 		};
-
-	// 		let images = [];
-	// 		if (confrimUpdateImage === 'true') {
-	// 			const media = await mediaReleaseSchema.findById(id);
-	// 			media.image.forEach((image) => {
-	// 				fs.unlinkSync(`assets/${image}`);
-	// 			});
-	// 			images = req.files.map((file) => file.filename);
-	// 			updateMedia.image = images;
-	// 		}
-	// 		try{
-	// 			const result = await mediaReleaseSchema.findByIdAndUpdate (id, updateMedia , {new: true});
-	// 			res.status(200).send({ message: 'Event berhasil diupdate', data: result });
-	// 		}catch(err){
-	// 			console.log(err.message);
-	// 			response(500, err, 'internal server error \n gagal mengupdate event', res);
-	// 		}
-	// 	});
-    // },
-
 	put: async (req, res) => {
 		const id = req.params._id;
 		upload.many(req, res, async (error) => {
