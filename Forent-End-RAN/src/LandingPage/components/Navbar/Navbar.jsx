@@ -64,10 +64,6 @@ const Navbar = ({ sectionId }) => { // Accept sectionId as a prop
                                 style={{ color: isHome ? '#0F5998' : '#FFFFFF' }}>Produk</Link>
                         </li>
                         <li className="nav-item px-1">
-                            <Link className={`nav-link fw-medium ${location.pathname === '/tentang-kami' ? 'active underline' : ''}`} to="/tentang-kami"
-                                style={{ color: isHome ? '#0F5998' : '#FFFFFF' }}>Tentang Kami</Link>
-                        </li>
-                        <li className="nav-item px-1">
                             <Link className={'nav-link fw-medium'} smooth to="/kontak" onClick={(event) => handleSmoothScroll(event, sectionId)}
                                 style={{ color: isHome ? '#0F5998' : '#FFFFFF' }}>
                                 Kontak

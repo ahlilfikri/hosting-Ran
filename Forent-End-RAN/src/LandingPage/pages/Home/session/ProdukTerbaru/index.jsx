@@ -7,7 +7,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import ImageError from '../../../../../assets/error.png';
 
-
 const port = `${import.meta.env.VITE_BASE_URL}/`;
 
 const Index = () => {
@@ -63,7 +62,6 @@ const Index = () => {
                                         fontFamily: 'poppins',
                                         fontSize: '12px',
                                         fontWeight: 'bold',
-
                                     }}>Lihat Semua</span>
                                 </Link>
                             </button>

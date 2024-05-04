@@ -33,7 +33,6 @@ const Index = () => {
     };
 
     const handleClick = (index) => {
-        setVal(index)
         const imageSrc = `${import.meta.env.VITE_BASE_URL}/assets/${encodeURIComponent(data.image[index])}`;
         setImage(imageSrc)
     };
@@ -47,7 +46,7 @@ const Index = () => {
             setImage(`${import.meta.env.VITE_BASE_URL}/assets/${encodeURIComponent(data.image[0])}`);
         }
     }, [data]);
-
+    console.log(data);
     return (
         <Fragment>
             <Navbar sectionId={'kontak-section-detail-produk'}></Navbar>
@@ -78,9 +77,8 @@ const Index = () => {
                                     <p>Tidak ada data</p>
                                 )}
                                 <p style={{ width: '34.2vw', borderBottom: '1px solid #D9D9D9' }}></p>
-                                <p style={{ fontSize: '19px', color: '#666666' }}>Seri Product / No. Product</p>
-                                <p style={{ fontSize: '19px', color: '#666666' }}>-/- Reviews</p>
                                 <p style={{ fontSize: '20', color: 'black', fontWeight: 'bold' }}>Product Type:</p>
+                                <p>{data.kategori ? data.kategori['nama'] : 'data tidak dapat ditampilkan'}</p>
                             </div>
                         </div>
                     </div>

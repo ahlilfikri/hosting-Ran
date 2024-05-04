@@ -45,7 +45,9 @@ const Index = () => {
                                             </div>
                                             <div className="text-container">
                                                 <p className='pt-2 fw-bold text-black' style={{ fontSize: '25px' }}>{item.title}</p>
-                                                <p className='fw-semibold' style={{ fontFamily: 'poppins', fontSize: '15px', color: '#9E9E9E', marginTop: '-10px' }}>{item.content}</p>
+                                                <p className='fw-semibold' style={{ fontFamily: 'poppins', fontSize: '15px', color: '#9E9E9E', marginTop: '-10px' }}>
+                                                    {item.content.length > 100 ? `${item.content.slice(0, 100)}...` : item.content}
+                                                </p>
                                             </div>
                                         </Link>
                                     </div>

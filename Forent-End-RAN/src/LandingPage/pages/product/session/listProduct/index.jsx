@@ -96,10 +96,8 @@ const Index = () => {
                             <label htmlFor="sort" className="pe-2">Sort By :</label>
                             <select className="p-2" id="sort" onChange={handleSortChange} value={selectSort} style={{ background: 'white', color: 'black', borderRadius: '0.5vw', border: '1 px solid #959595' }}>
                                 <option value="none" disabled>Choose Sort</option>
-                                <option value="none">None</option>
                                 <option value="latest">Latest Product</option>
                                 <option value="oldest">Oldest Product</option>
-                                <option value="top">Top Product</option>
                             </select>
                         </div>
                     </div>
@@ -131,7 +129,6 @@ const Index = () => {
                                 </p>
                             );
                         })}
-                        <h3 className='mt-5'>Brands</h3>
                     </div>
                     <div className="col-12 col-sm-8 mt-3">
                         <div className="row">
@@ -139,7 +136,7 @@ const Index = () => {
                             {loadState === 'success' && data && data.map((item, index) => {
                                 const imageSrc = `${import.meta.env.VITE_BASE_URL}/assets/${encodeURIComponent(item.image)}`;
                                 return (
-                                    <div key={index} className="col-6 col-md-3">
+                                    <div key={index} className="col-6 col-md-3 my-3">
                                         <Link to={`/detail-produk/${item._id}`}>
                                             <div className="image-container" style={{ overflow: 'hidden', height: '68%' }}>
                                                 <img src={imageSrc} alt="" style={{ height: '100%', width: '100%', objectFit: 'cover', border: '1px solid #d8d5d5' }} onError={(e) => { e.target.src = ImageError; }} />
